@@ -301,6 +301,11 @@
             <p class="website-description" style="font-weight: bolder; color: white; font-weight: bold; ">
                 HEALTHY
             </p>
+            
+
+<div style="margin-top: 20px;">
+    <button id="toggleStatus" class="btn" style="background-color: #e74c3c; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; border: none;">Toggle Status</button>
+</div>
         </div>
     </main>
     
@@ -349,6 +354,23 @@
                 alertBox.style.display = 'none';
             }, 3000);
         });
+        const toggleButton = document.getElementById('toggleStatus');
+    const statusText = document.querySelector('.website-description');
+    let isHealthy = true;
+    
+    toggleButton.addEventListener('click', function() {
+        if (isHealthy) {
+            statusText.textContent = 'FAULTY';
+            statusText.style.backgroundColor = 'rgba(231, 76, 60, 0.7)'; // Red background
+            statusText.style.color = 'white';
+            isHealthy = false;
+        } else {
+            statusText.textContent = 'HEALTHY';
+            statusText.style.backgroundColor = 'rgba(41, 209, 19, 0.7)'; // Green background
+            statusText.style.color = 'white';
+            isHealthy = true;
+        }
+    });
     </script>
 </body>
 </html>
