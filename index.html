@@ -394,14 +394,20 @@
         .toggle-btn:hover i {
             transform: rotate(180deg);
         }
+        .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+        object-fit: cover;/* This ensures the image maintains its aspect ratio */
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <div class="logo"></div>
-            <h1 style="font-size: 22px;">Next Generation IoT & ML - Based Predictive Maintenance System</h1>
-        </div>
+    <img src="logo.png" alt="NextGen IMPM Logo" class="logo">
+    <h1 style="font-size: 22px;">Next Generation IoT & ML - Based Predictive Maintenance System</h1>
+</div>
         <nav>
             <ul>
                 <li><a href="history.html" id="historyLink" style="font-size: 17px; font-weight: bold; ">HISTORY</a></li>
